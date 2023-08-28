@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Assessment Results</title>
+</head>
+<body>
+    <h1>Health Assessment Results</h1>
+
+    <h2>Possible Diseases:</h2>
+    <ul>
+        {% for disease in diseases %}
+            <li>{{ disease }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>
+        {% if diseases %}
+            Based on the symptoms you provided, these are the possible diseases you might want to consider.
+        {% else %}
+            It seems you don't have symptoms associated with any specific diseases.
+        {% endif %}
+    </p>
+
+    <p>
+        Remember, this assessment is not a substitute for professional medical advice. Please consult a healthcare provider for accurate diagnosis and treatment.
+    </p>
+</body>
+</html>
